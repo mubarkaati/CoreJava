@@ -1,7 +1,7 @@
 package abstraction;
 
 //(0-100%)
-//abstract class cannot
+//cannot create object of abstract class
 abstract class AbstractDemo {
 
     public abstract String getUser();
