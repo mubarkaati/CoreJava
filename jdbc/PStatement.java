@@ -28,7 +28,11 @@ public class PStatement {
             System.out.println("Enter Employee Password");
             createEmployee.setString(3, bufferedReader.readLine());
 
-            createEmployee.execute();
+            boolean status = createEmployee.execute();
+            if (status == false) {
+                int count = createEmployee.getUpdateCount();
+                System.out.println(count);
+            }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         } catch (IOException e) {
